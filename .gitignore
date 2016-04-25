@@ -57,9 +57,12 @@ fabric.properties
 *.o
 *~
 \#*\#
-#*.txt
-#test/*
+*.txt
+test/*
 
 ## Binary
 a.out
-lem_in
+ia
+
+## Package
+n4s*
