@@ -8,7 +8,22 @@
 ** Last update Mon Apr 25 15:41:48 2016 Hugo SOSZYNSKI
 */
 
+#include	"../includes/ia.h"
+
+static void	init_car(t_car *car)
+{
+  car->forward = 0.0;
+  car->backward = 0.0;
+  car->wheels_dir = 0.0;
+  my_bzero(car->lidar, 32 * sizeof(float));
+  car->cycle_wait = 0;
+}
+
 int		main()
 {
-  return (0);
+  t_car		car;
+
+  init_car(&car);
+  mainloop(&car);
+  return (SUCCESS);
 }

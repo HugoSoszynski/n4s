@@ -11,6 +11,17 @@
 #ifndef			IA_H_
 # define		IA_H_
 
+# include		"get_next_line.h"
+# include		"define.h"
+
+# ifndef 		SUCCESS
+#  define		SUCCESS			(0)
+# endif			/* !SUCCESS */
+
+# ifndef 		ERROR
+#  define		ERROR			(1)
+# endif			/* !ERROR */
+
 typedef struct		s_car
 {
   float			forward;
@@ -19,5 +30,8 @@ typedef struct		s_car
   float			lidar[32];
   int			cycle_wait;
 }			t_car;
+
+void			my_bzero(void *_tab, size_t size);
+int			mainloop(t_car *car);
 
 #endif			/* !IA_H_ */
