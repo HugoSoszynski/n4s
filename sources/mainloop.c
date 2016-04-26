@@ -8,10 +8,17 @@
 ** Last update Tue Apr 26 09:12:12 2016 Hugo SOSZYNSKI
 */
 
+#include 	<stddef.h>
 #include	"../includes/ia.h"
 
 int		mainloop(t_car *car)
 {
+  char		*line;
+
   (void)(car);
+  while ((line = get_next_line(0)) != NULL)
+  {
+    free(line);
+  }
   return (SUCCESS);
 }
