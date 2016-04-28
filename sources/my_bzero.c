@@ -15,6 +15,7 @@ void		my_bzero(void *_tab, size_t size)
   char		*tab;
   size_t	cpt;
 
+  tab = (char*)(_tab);
   cpt = 0;
   while (cpt < size)
   {

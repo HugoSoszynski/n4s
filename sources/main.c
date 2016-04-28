@@ -8,7 +8,7 @@
 ** Last update Mon Apr 25 15:41:48 2016 Hugo SOSZYNSKI
 */
 
-#include	"../includes/ia.h"
+#include	"ia.h"
 
 static void	init_car(t_car *car)
 {
