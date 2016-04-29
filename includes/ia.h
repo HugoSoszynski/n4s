@@ -33,5 +33,7 @@ typedef struct		s_car
 
 void			my_bzero(void *_tab, size_t size);
 int			mainloop(t_car *car);
+float			my_getfloat(char *str);
+int			my_getnbr(char *str);
 
 #endif			/* !IA_H_ */
