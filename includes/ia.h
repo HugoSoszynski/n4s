@@ -35,5 +35,8 @@ void			my_bzero(void *_tab, size_t size);
 int			mainloop(t_car *car);
 float			my_getfloat(char *str);
 int			my_getnbr(char *str);
+int			my_strlen(const char *str);
+void 			*error_null(const char *msg);
+int 			error_int(const char *msg);
 
 #endif			/* !IA_H_ */
