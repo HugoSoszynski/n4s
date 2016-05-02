@@ -38,5 +38,7 @@ int			my_getnbr(char *str);
 int			my_strlen(const char *str);
 void 			*error_null(const char *msg);
 int 			error_int(const char *msg);
+void			my_putnbr(int nb);
+void			my_putfloat(float nb);
 
 #endif			/* !IA_H_ */
