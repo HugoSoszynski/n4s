@@ -5,7 +5,7 @@
 ## Login   <hugo.soszynski@epitech.eu>
 ## 
 ## Started on  Mon Apr 25 10:54:00 2016 Hugo SOSZYNSKI
-## Last update Fri Apr 29 16:02:35 2016 Hugo SOSZYNSKI
+## Last update Mon May  2 10:21:16 2016 Hugo SOSZYNSKI
 ##
 
 CC		=	gcc
@@ -24,7 +24,9 @@ SRCS		=	sources/main.c \
 			sources/mainloop.c \
 			sources/my_bzero.c \
 			sources/my_getfloat.c \
-			sources/my_getbnr.c
+			sources/my_getbnr.c \
+			sources/error.c \
+			sources/my_strlen.c
 
 OBJS		=	$(SRCS:.c=.o)
 
