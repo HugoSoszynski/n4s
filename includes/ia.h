@@ -13,6 +13,7 @@
 
 # include		"get_next_line.h"
 # include		"define.h"
+# include		"struct.h"
 
 # ifndef 		SUCCESS
 #  define		SUCCESS			(0)
@@ -21,15 +22,6 @@
 # ifndef 		ERROR
 #  define		ERROR			(1)
 # endif			/* !ERROR */
-
-typedef struct		s_car
-{
-  float			forward;
-  float			backward;
-  float			wheels_dir;
-  float			lidar[32];
-  int			cycle_wait;
-}			t_car;
 
 void			my_bzero(void *_tab, size_t size);
 int			mainloop(t_car *car);

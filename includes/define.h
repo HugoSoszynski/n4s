@@ -47,4 +47,16 @@
 #  define		CYCLE_WAIT		(8)
 # endif			/* !CYCLE_WAIT */
 
+# ifndef 		STATE_RESPONSE
+#  define		STATE_RESPONSE		(1)
+# endif			/* !STATE_RESPONSE */
+
+# ifndef 		LIDAR_RESPONSE
+#  define		LIDAR_RESPONSE		(2)
+# endif			/* !LIDAR_RESPONSE */
+
+# ifndef 		VALUE_RESPONSE
+#  define		VALUE_RESPONSE		(3)
+# endif			/* !VALUE_RESPONSE */
+
 #endif 			/* !DEFINE_H_ */
