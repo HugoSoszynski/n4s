@@ -16,9 +16,8 @@ int		mainloop(t_car *car)
   char		*line;
 
   (void)(car);
-  while ((line = get_next_line(0)) != NULL)
-  {
-    free(line);
-  }
+  if ((line = get_next_line(0)) == NULL)
+    return (error_int("Can't get the response"));
+  while ()
   return (SUCCESS);
 }

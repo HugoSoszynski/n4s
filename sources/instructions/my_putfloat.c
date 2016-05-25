@@ -23,27 +23,24 @@ void		my_putnbr(int nb)
   write(1, &nb, 1);
 }
 
-void		my_putfloat(float nb)
+void		my_putfloat(float nb, int nb_dec)
 {
-  int		ent;
   int		dec;
+  char		digit;
 
   if (nb < 0)
   {
     write(1, "-", 1);
     nb *= -1;
   }
-  ent = (int)(nb);
-  nb = nb - (float)(ent);
-  dec = 0;
-  while (nb > 0.000010)
-  {
-    nb *= 10.0;
-    dec *= 10;
-    dec += nb;
-    nb -= dec;
-  }
-  my_putnbr(ent);
+  my_putnbr((int)(nb));
   write(1, ".", 1);
-  my_putnbr(dec);
+  dec = 0;
+  while (dec < nb_dec)
+  {
+    nb *= 10;
+    digit = (char)((int)(nb) % 10) + '0';
+    write(1, &digit, 1);
+    dec++;
+  }
 }

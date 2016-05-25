@@ -22,13 +22,4 @@ typedef struct		s_car
   int			cycle_wait;
 }			t_car;
 
-typedef struct		s_response
-{
-  char			*code_str;
-  float			float_value[32];
-  int			value_id_code;
-  char			type;
-  bool			status;
-}			t_response;
-
 #endif			/* !STRUCT_H_ */
