@@ -18,6 +18,7 @@ static void	init_car(t_car *car)
   car->wheels_dir = -1.0f;
   my_bzero(car->lidar, 32 * sizeof(double));
   car->cycle_wait = 0;
+  car->track_cleared = false;
 }
 
 int		main()
@@ -27,9 +28,14 @@ int		main()
   init_car(&car);
   if (start_simulation())
     return (ERROR);
-  car_forward(&car);
-  wheels_dir(&car);
-  sleep(2);
+  if (mainloop(&car) != SUCCESS)
+  {
+    write(2, "An error occurred while running the simulation\n", 47);
+    write(2, "Stopping the simulation...\n", 27);
+    if (stop_simulation())
+      return (ERROR);
+    return (ERROR);
+  }
   if (stop_simulation())
     return (ERROR);
   return (SUCCESS);

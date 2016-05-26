@@ -15,12 +15,15 @@
 int		get_info_lidar(t_car *car)
 {
   char		*response;
+  int		ret;
 
   if (write(1, "GET_INFO_LIDAR\n", 15) < 0)
     return (error_int("Can't send instructions to API"));
   if ((response = get_next_line(0)) == NULL)
     return (error_int("Can't get the response"));
-  // Check de la ligne renvoyée
+  ret = parse_answer_for_type_2(car, response);
   free(response);
+  if (ret != SUCCESS)
+    return (ERROR);
   return (SUCCESS);
 }

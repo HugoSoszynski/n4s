@@ -12,8 +12,15 @@
 
 int		mainloop(t_car *car)
 {
-  //char		*line;
-
-  (void)(car);
+  while (car->track_cleared == false)
+  {
+    if (get_info_lidar(car) != SUCCESS)
+      return (ERROR);
+    // Fonction de calcul
+    if (car_forward(car) !=SUCCESS)
+      return (ERROR);
+    if (wheels_dir(car) != SUCCESS)
+      return (ERROR);
+  }
   return (SUCCESS);
 }
