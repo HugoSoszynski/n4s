@@ -5,7 +5,7 @@
 ## Login   <hugo.soszynski@epitech.eu>
 ## 
 ## Started on  Mon Apr 25 10:54:00 2016 Hugo SOSZYNSKI
-## Last update Thu May 26 15:03:20 2016 Hugo SOSZYNSKI
+## Last update Thu May 26 15:26:52 2016 Hugo SOSZYNSKI
 ##
 
 CC		=	gcc
@@ -19,17 +19,17 @@ CFLAGS		+=	-ggdb3
 
 NAME		=	ia
 
-INSTRUCTIONS	=	sources/instructions/car_forward.c \
-			sources/instructions/get_current_speed.c \
-			sources/instructions/get_current_wheels.c \
-			sources/instructions/get_info_lidar.c \
-			sources/instructions/start_simulation.c \
+INSTRUCTIONS	=	sources/instructions/start_simulation.c \
 			sources/instructions/stop_simulation.c \
+			sources/instructions/car_forward.c \
 			sources/instructions/wheels_dir.c \
-			sources/instructions/my_putfloat.c
+			sources/instructions/my_putfloat.c \
+#			sources/instructions/get_current_speed.c \
+			sources/instructions/get_current_wheels.c \
+			sources/instructions/get_info_lidar.c
 
 RESPONSE	=	sources/responsive/my_getfloat.c \
-			sources/responsive/my_getbnr.c \
+			sources/responsive/my_getnbr.c \
 			sources/responsive/my_strlen.c \
 			sources/responsive/my_str_to_wordtab.c \
 			sources/responsive/parse_answer.c

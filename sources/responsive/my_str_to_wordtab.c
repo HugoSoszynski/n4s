@@ -8,9 +8,9 @@
 ** Last update Tue May 24 17:20:59 2016 Grégoire LOENS
 */
 
-#include	<stdio.h>
+#include	<stdlib.h>
 
-int		count_token(char *str)
+static int	count_token(char *str)
 {
   int		counter;
   int		token_counter;

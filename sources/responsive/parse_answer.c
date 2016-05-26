@@ -8,7 +8,9 @@
 ** Last update Wed May 25 15:11:00 2016 Grégoire LOENS
 */
 
-#include	"ia.h";
+#include 	<stdlib.h>
+#include 	<unistd.h>
+#include	"ia.h"
 #include	"struct.h"
 
 int		parse_answer_for_type_2(t_car *car, char *answer)
@@ -39,7 +41,8 @@ int		parse_answer_for_type_1(char *answer)
 {
   char		**answer_tab;
 
-  answer_tab = my_str_to_wordtab(answer);
+  if ((answer_tab = my_str_to_wordtab(answer)) == NULL)
+    return (error_int("Can't malloc"));
   if (answer_tab[1][0] == 'K')
   {
     write(2, &answer_tab[2], my_strlen(answer_tab[2]));

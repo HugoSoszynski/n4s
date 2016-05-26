@@ -12,15 +12,18 @@
 #include	<malloc.h>
 #include 	"ia.h"
 
-int		stop_simulation(t_car *car)
+int		stop_simulation()
 {
   char		*response;
+  int		ret;
 
   if (write(1, "STOP_SIMULATION\n", 16) < 0)
     return (error_int("Can't send instructions to API"));
   if ((response = get_next_line(0)) == NULL)
     return (error_int("Can't get the response"));
-  // Check de la ligne renvoyée
+  ret = parse_answer_for_type_1(response);
   free(response);
+  if (ret != SUCCESS)
+    return (ERROR);
   return (SUCCESS);
 }

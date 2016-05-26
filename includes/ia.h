@@ -11,8 +11,8 @@
 #ifndef			IA_H_
 # define		IA_H_
 
+# include		<stddef.h>
 # include		"get_next_line.h"
-# include		"define.h"
 # include		"struct.h"
 
 # ifndef 		SUCCESS
@@ -33,9 +33,12 @@ int 			error_int(const char *msg);
 int			my_putnbr(int nb);
 int			my_putfloat(float nb, int nb_dec);
 int			get_info_lidar(t_car *car);
-int			stop_simulation(t_car *car);
-int			start_simulation(t_car *car);
+int			stop_simulation();
+int			start_simulation();
 int			car_forward(t_car *car);
 int			wheels_dir(t_car *car);
+char			**my_str_to_wordtab(char *str);
+int			parse_answer_for_type_1(char *answer);
+int			parse_answer_for_type_2(t_car *car, char *answer);
 
 #endif			/* !IA_H_ */

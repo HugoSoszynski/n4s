@@ -18,7 +18,7 @@ int		wheels_dir(t_car *car)
 
   if (write(1, "WHEELS_DIR:", 11) < 0)
     return (error_int("Can't send instructions to API"));
-  if (my_putfloat(car->forward, 4) != SUCCESS)
+  if (my_putfloat(car->wheels_dir, 4) != SUCCESS)
     return (error_int("Can't send instructions to API"));
   if (write(1, "\n", 1) < 0)
     return (error_int("Can't send instructions to API"));

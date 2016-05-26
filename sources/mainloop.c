@@ -12,7 +12,7 @@
 
 int		mainloop(t_car *car)
 {
-  char		*line;
+  //char		*line;
 
   (void)(car);
   return (SUCCESS);
