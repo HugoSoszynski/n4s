@@ -9,38 +9,46 @@
 */
 
 #include 	<unistd.h>
+#include 	"ia.h"
 
-void		my_putnbr(int nb)
+int		my_putnbr(int nb)
 {
   if (nb < 0)
   {
-    write(1, "-", 1);
+    if (write(1, "-", 1) < 0)
+      return (ERROR);
     nb *= -1;
   }
   if (nb >= 10)
     my_putnbr(nb / 10);
   nb = nb % 10 + '0';
-  write(1, &nb, 1);
+  if (write(1, &nb, 1) < 0)
+    return (ERROR);
+  return (SUCCESS);
 }
 
-void		my_putfloat(float nb, int nb_dec)
+int		my_putfloat(float nb, int nb_dec)
 {
   int		dec;
   char		digit;
 
   if (nb < 0)
   {
-    write(1, "-", 1);
+    if (write(1, "-", 1) < 0)
+      return (ERROR);
     nb *= -1;
   }
   my_putnbr((int)(nb));
-  write(1, ".", 1);
+  if (write(1, ".", 1) < 0)
+    return (ERROR);
   dec = 0;
   while (dec < nb_dec)
   {
     nb *= 10;
     digit = (char)((int)(nb) % 10) + '0';
-    write(1, &digit, 1);
+    if (write(1, &digit, 1) < 0)
+      return (ERROR);
     dec++;
   }
+  return (SUCCESS);
 }

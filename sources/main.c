@@ -24,6 +24,5 @@ int		main()
   t_car		car;
 
   init_car(&car);
-  mainloop(&car);
   return (SUCCESS);
 }

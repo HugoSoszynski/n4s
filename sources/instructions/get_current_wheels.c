@@ -16,8 +16,8 @@ int		get_current_wheels(t_car *car)
 {
   char		*response;
 
-  if (write(1, "GET_CURRENT_WHEELS\n", 17) < 0)
-    return (error_int("Can't write"));
+  if (write(1, "GET_CURRENT_WHEELS\n", 19) < 0)
+    return (error_int("Can't send instructions to API"));
   if ((response = get_next_line(0)) == NULL)
     return (error_int("Can't get the response"));
   // Check de la ligne renvoyée

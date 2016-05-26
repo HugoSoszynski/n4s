@@ -30,7 +30,12 @@ int			my_getnbr(char *str);
 int			my_strlen(const char *str);
 void 			*error_null(const char *msg);
 int 			error_int(const char *msg);
-void			my_putnbr(int nb);
-void			my_putfloat(float nb);
+int			my_putnbr(int nb);
+int			my_putfloat(float nb, int nb_dec);
+int			get_info_lidar(t_car *car);
+int			stop_simulation(t_car *car);
+int			start_simulation(t_car *car);
+int			car_forward(t_car *car);
+int			wheels_dir(t_car *car);
 
 #endif			/* !IA_H_ */

@@ -8,7 +8,6 @@
 ** Last update Tue Apr 26 09:12:12 2016 Hugo SOSZYNSKI
 */
 
-#include	<malloc.h>
 #include	"ia.h"
 
 int		mainloop(t_car *car)
@@ -16,8 +15,5 @@ int		mainloop(t_car *car)
   char		*line;
 
   (void)(car);
-  if ((line = get_next_line(0)) == NULL)
-    return (error_int("Can't get the response"));
-  while ()
   return (SUCCESS);
 }

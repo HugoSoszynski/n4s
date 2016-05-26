@@ -16,8 +16,8 @@ int		stop_simulation(t_car *car)
 {
   char		*response;
 
-  if (write(1, "STOP_SIMULATION\n", 17) < 0)
-    return (error_int("Can't write"));
+  if (write(1, "STOP_SIMULATION\n", 16) < 0)
+    return (error_int("Can't send instructions to API"));
   if ((response = get_next_line(0)) == NULL)
     return (error_int("Can't get the response"));
   // Check de la ligne renvoyée
