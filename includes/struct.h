@@ -20,6 +20,7 @@ typedef struct		s_car
   float			wheels_dir;
   float			lidar[32];
   int			cycle_wait;
+  bool			track_cleared;
 }			t_car;
 
 #endif			/* !STRUCT_H_ */
