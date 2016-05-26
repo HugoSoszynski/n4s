@@ -33,6 +33,8 @@ int		parse_answer_for_type_2(t_car *car, char *answer)
     counter++;
     tab_counter++;
   }
+  if (answer_tab[3][0] == 'T')
+    car->track_cleared = true;
   free(answer_tab);
   return (SUCCESS);
 }
@@ -48,6 +50,8 @@ int		parse_answer_for_type_1(char *answer)
     write(2, &answer_tab[2], my_strlen(answer_tab[2]));
     return (ERROR);
   }
+  if (answer_tab[3][0] == 'T')
+    car->track_cleared = true;
   free(answer_tab);
   return (SUCCESS);
 }
