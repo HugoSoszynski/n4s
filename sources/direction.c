@@ -9,7 +9,6 @@
 */
 
 #include 	<math.h>
-#include <stdio.h>
 #include 	"ia.h"
 
 static float	resolv_polynom(float *polynom)
