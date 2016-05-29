@@ -41,5 +41,5 @@ void		set_direction(t_car *car)
   polynom[0] = direction_point[0] * direction_point[0] +
 	       direction_point[1] * direction_point[1];
   result = resolv_polynom(polynom);
-  car->wheels_dir = -direction_point[0] * result * 0.75f;
+  car->wheels_dir = -direction_point[0] * result * 0.60f;
 }
