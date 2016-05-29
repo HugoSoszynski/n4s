@@ -5,7 +5,7 @@
 ## Login   <hugo.soszynski@epitech.eu>
 ## 
 ## Started on  Mon Apr 25 10:54:00 2016 Hugo SOSZYNSKI
-## Last update Sun May 29 14:39:46 2016 Hugo SOSZYNSKI
+## Last update Sun May 29 21:18:10 2016 Hugo SOSZYNSKI
 ##
 
 CC		=	gcc
@@ -27,7 +27,6 @@ INSTRUCTIONS	=	sources/instructions/start_simulation.c \
 			sources/instructions/get_info_lidar.c
 
 RESPONSE	=	sources/responsive/my_getfloat.c \
-			sources/responsive/my_getnbr.c \
 			sources/responsive/my_strlen.c \
 			sources/responsive/my_str_to_wordtab.c \
 			sources/responsive/parse_answer.c
