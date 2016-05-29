@@ -30,6 +30,6 @@ void		set_speed(t_car *car)
     car->track_cleared = true;
     return ;
   }
-  average /= 4300;
+  average /= 3500;
   car->forward = average;
 }

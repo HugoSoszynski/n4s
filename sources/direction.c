@@ -33,13 +33,13 @@ void		set_direction(t_car *car)
   float		result;
 
   vector_left[0] = -0.5f * car->lidar[0];
-  vector_left[1] = -0.8660f * vector_left[0];
+  vector_left[1] = -1.732f * vector_left[0];
   vector_right[0] = 0.5f * car->lidar[31];
-  vector_right[1] = 0.8660f * vector_right[0];
+  vector_right[1] = 1.732f * vector_right[0];
   direction_point[0] = (vector_left[0] + vector_right[0]) / 2;
   direction_point[1] = (vector_left[1] + vector_right[1]) / 2;
   polynom[0] = direction_point[0] * direction_point[0] +
 	       direction_point[1] * direction_point[1];
   result = resolv_polynom(polynom);
-  car->wheels_dir = -direction_point[0] * result * 0.60f;
+  car->wheels_dir = -direction_point[0] * result;
 }
