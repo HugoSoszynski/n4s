@@ -33,13 +33,13 @@ int		parse_answer_for_type_2(t_car *car, char *answer)
     counter++;
     tab_counter++;
   }
-  if (answer_tab[3][0] == 'T')
+  if (answer_tab[35][0] == 'T')
     car->track_cleared = true;
   free(answer_tab);
   return (SUCCESS);
 }
 
-int		parse_answer_for_type_1(char *answer)
+int		parse_answer_for_type_1(t_car *car, char *answer)
 {
   char		**answer_tab;
 

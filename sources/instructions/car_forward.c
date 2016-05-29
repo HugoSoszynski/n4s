@@ -24,7 +24,7 @@ int		car_forward(t_car *car)
     return (error_int("Can't send instructions to API"));
   if ((response = get_next_line(0)) == NULL)
     return (error_int("Can't get the response"));
-  // Check de la ligne renvoyée
+  parse_answer_for_type_1(car, response);
   free(response);
   return (SUCCESS);
 }

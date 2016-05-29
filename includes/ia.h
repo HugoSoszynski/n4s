@@ -33,12 +33,14 @@ int 			error_int(const char *msg);
 int			my_putnbr(int nb);
 int			my_putfloat(float nb, int nb_dec);
 int			get_info_lidar(t_car *car);
-int			stop_simulation();
-int			start_simulation();
+int			stop_simulation(t_car *car);
+int			start_simulation(t_car *car);
 int			car_forward(t_car *car);
 int			wheels_dir(t_car *car);
 char			**my_str_to_wordtab(char *str);
-int			parse_answer_for_type_1(char *answer);
+int			parse_answer_for_type_1(t_car *car, char *answer);
 int			parse_answer_for_type_2(t_car *car, char *answer);
+void			set_speed(t_car *car);
+void			set_direction(t_car *car);
 
 #endif			/* !IA_H_ */

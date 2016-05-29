@@ -5,7 +5,7 @@
 ## Login   <hugo.soszynski@epitech.eu>
 ## 
 ## Started on  Mon Apr 25 10:54:00 2016 Hugo SOSZYNSKI
-## Last update Thu May 26 15:57:12 2016 Hugo SOSZYNSKI
+## Last update Sun May 29 14:39:46 2016 Hugo SOSZYNSKI
 ##
 
 CC		=	gcc
@@ -15,7 +15,7 @@ RM		=	rm -f
 CFLAGS		+=	-W -Wextra -Wall
 CFLAGS		+=	-Werror
 CFLAGS		+=	-Iincludes
-CFLAGS		+=	-ggdb3
+CFLAGS		+=	-lm
 
 NAME		=	ia
 
@@ -25,8 +25,6 @@ INSTRUCTIONS	=	sources/instructions/start_simulation.c \
 			sources/instructions/wheels_dir.c \
 			sources/instructions/my_putfloat.c \
 			sources/instructions/get_info_lidar.c
-#			sources/instructions/get_current_speed.c \
-			sources/instructions/get_current_wheels.c
 
 RESPONSE	=	sources/responsive/my_getfloat.c \
 			sources/responsive/my_getnbr.c \
@@ -39,6 +37,8 @@ SRCS		=	sources/main.c \
 			sources/mainloop.c \
 			sources/my_bzero.c \
 			sources/error.c \
+			sources/speed.c \
+			sources/direction.c \
 			$(INSTRUCTIONS) \
 			$(RESPONSE)
 
@@ -48,7 +48,7 @@ OBJS		=	$(SRCS:.c=.o)
 all:		$(NAME)
 
 $(NAME):	$(OBJS)
-		$(CC) $(OBJS) -o $(NAME) -Iincludes
+		$(CC) $(OBJS) -o $(NAME) $(CFLAGS)
 
 clean:
 		$(RM) $(OBJS)

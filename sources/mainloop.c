@@ -16,10 +16,11 @@ int		mainloop(t_car *car)
   {
     if (get_info_lidar(car) != SUCCESS)
       return (ERROR);
-    // Fonction de calcul
-    if (car_forward(car) !=SUCCESS)
-      return (ERROR);
+    set_speed(car);
+    set_direction(car);
     if (wheels_dir(car) != SUCCESS)
+      return (ERROR);
+    if (car_forward(car) !=SUCCESS)
       return (ERROR);
   }
   return (SUCCESS);

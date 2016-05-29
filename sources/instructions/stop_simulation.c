@@ -12,7 +12,7 @@
 #include	<malloc.h>
 #include 	"ia.h"
 
-int		stop_simulation()
+int		stop_simulation(t_car*car)
 {
   char		*response;
   int		ret;
@@ -21,7 +21,7 @@ int		stop_simulation()
     return (error_int("Can't send instructions to API"));
   if ((response = get_next_line(0)) == NULL)
     return (error_int("Can't get the response"));
-  ret = parse_answer_for_type_1(response);
+  ret = parse_answer_for_type_1(car, response);
   free(response);
   if (ret != SUCCESS)
     return (ERROR);
