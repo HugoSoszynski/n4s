@@ -41,5 +41,8 @@ void		set_direction(t_car *car)
   polynom[0] = direction_point[0] * direction_point[0] +
 	       direction_point[1] * direction_point[1];
   result = resolv_polynom(polynom);
-  car->wheels_dir = -direction_point[0] * result;
+  if (car->average_toward_distance > 2100.0) //Track 3 fail
+    car->wheels_dir = 0;
+  else
+    car->wheels_dir = -direction_point[0] * result;
 }

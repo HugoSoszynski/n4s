@@ -17,8 +17,11 @@ typedef struct		s_car
 {
   float			forward;
   float			backward;
+  float			old_forward;
+  float			old_backward;
   float			wheels_dir;
   float			lidar[32];
+  float			average_toward_distance;
   int			cycle_wait;
   bool			track_cleared;
 }			t_car;
